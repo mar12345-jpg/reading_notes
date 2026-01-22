@@ -4,25 +4,28 @@ import json
 def main():
     with open("data.json", encoding="UTF-8") as f:
         data = json.load(f)
-# 文字コードUTF-8でjsonファイル読むよ、名前はf
+# fにjsonファイル入れて、pythonデータに変換してdataに入れる
 
     result = {}
-# jsonファイルのデータを引数無しでresultにセット
+# 空の辞書をrerultにセット
 
     for item in data:
         if item["category"] not in result:
             result[item["category"]] = []
-# if not がどうなってるの？
+# categoryがまだresultにセットされてなければTrue
+# resultのcategory用の空のリストを用意
 
         if item["price"] >= 1000:
             result[item["category"]].append(item["name"])
-# 1000円以上のやつはTRUE、カテゴリーと名前で表示できるようにしておく
+# 1000円以上のやつはTRUE
+# そのcategoryに名前を追加
 
     for k in result:
         print(k)
         for v in result[k]:
             print(" - " + v)
-# jsonファイルの中身表示と、-つけてkの中身全部表示して
+# kはカテゴリ名で
+# カテゴリ別に商品をひとつずつ表示
 
 if __name__ == "__main__":
     main()
