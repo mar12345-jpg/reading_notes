@@ -1,0 +1,7 @@
+[
+  {"name": "りんご", "category": "果物", "price": 1200},
+  {"name": "バナナ", "category": "果物", "price": 300},
+  {"name": "きゅうり", "category": "野菜", "price": 150},
+  {"name": "メロン", "category": "果物", "price": 2500},
+  {"name": "トマト", "category": "野菜", "price": 800}
+]
